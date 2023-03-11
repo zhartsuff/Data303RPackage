@@ -1,3 +1,3 @@
 # Data303RPackage
 
-My name is Abby.
+My name is Gabby. This is our R package.
