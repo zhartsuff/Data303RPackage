@@ -11,3 +11,4 @@ df_apply <- function(.data, .fun, .filter, ...) {
 
 ##try_iris <- df_apply(iris, round, is.numeric)
 ##> try_iris
+##where does it go?
