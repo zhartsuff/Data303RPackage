@@ -20,18 +20,11 @@ knitr::opts_chunk$set(
 
 ## Description 
 
-This function takes in a data frame, a function, and a filter. 
+This function takes in a data frame, a function, and a filter. The function can be applied to a column of a data frame and return the column of the dataframe. The filter will return either a true or false.
 
-specifically dataframes that the user wants to input, the round function, and the is.numeric filter. This function will work best with dataframes that include precise numbers that
 
 ## Use 
-Our team used df_apply to to round the lengths and widths of iris petals using the R preset Iris dataframe. This would be useful as average gardeners aren't going to be micro-measuring their iris petals' lengths. 
-
-To use df_apply to round numbers, simply use the premade function round in the place of .fun. 
+Our team used df_apply to to round the lengths and widths of iris petals using the R preset Iris dataframe. This would be useful as average gardeners aren't going to be micro-measuring their iris petals' lengths. To use df_apply to round numbers, simply use the premade function round in the place of .fun. 
 
 iris_function <- df_apply(iris, round, is.numeric)
-
-
-
-
 
