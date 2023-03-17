@@ -1,8 +1,10 @@
 df_apply <- function(.data, .fun, .filter, ...) {
-  new_df <- dapply(data, function(x){
-    if (filter(x)){
-      fun(x)
+  lapply(.data, function(x){
+    if (.filter(x)){
+      .fun(x)
+    } else {
+      x
     }
-  })
-  return (new_df)
+  }) -> new_df
+  return (data.frame(new_df))
 }
