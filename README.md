@@ -1,5 +1,4 @@
 # Data303RPackage
-hi!!
 
 #create function 
 #df_apply(iris, round, is.numeric) 
@@ -31,4 +30,3 @@ df_apply <- function(.data, .fun, .filter, ...) {
   return (new_df)
 }
 ```
-
