@@ -1,0 +1,15 @@
+#' df_apply function
+#'
+#'@description
+#'This is the R preset dataframe
+#'
+#'@details
+#' example: round takes the numeric numbers in a column and rounds them up or down
+#' is.numeric determines if the data in the column is numeric or not
+#'
+#'
+
+
+library(readr)
+boloria <- read_csv("C:/Users/gfres/Downloads/boloria.csv")
+View(boloria)
