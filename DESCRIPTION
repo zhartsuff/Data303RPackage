@@ -2,9 +2,15 @@ Package: newprojdata303
 Title: This package takes a data frame and applies a function to each column where a condition is met
 Version: 0.0.0.9000
 Authors@R: 
-    person("Grace", "Van Farowe", , "gev", role = c("aut", "cre"),
+    person("Grace", "Van Farowe", , "gev22", role = c("aut", "cre"),
            comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+    person("Zander", "Hartsuff", , "zrh5", role = c("aut", "cre"),
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+    person("Gabby", "Freshly", , "gef4", role = c("aut", "cre"),
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: This package includes a function called df_apply which takes a data frame, condition function and a 
+    mutator function. The function applies the mutator function to all vectors in the data frame where the condition is 
+    true and returns the resulting data frame. It also includes example data frames to test and use the function on.
 License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
     license
 Encoding: UTF-8
@@ -13,3 +19,6 @@ RoxygenNote: 7.2.3
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
+Depends: 
+    R (>= 2.10)
+LazyData: true
