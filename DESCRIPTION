@@ -8,8 +8,7 @@ Authors@R:
 Description: This package includes a function called df_apply which takes a data frame, condition function and a 
     mutator function. The function applies the mutator function to all vectors in the data frame where the condition is 
     true and returns the resulting data frame. It also includes example data frames to test and use the function on.
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.3
@@ -21,4 +20,3 @@ Config/testthat/edition: 3
 Depends: 
     R (>= 2.10)
 LazyData: true
-
