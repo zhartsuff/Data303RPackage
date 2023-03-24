@@ -1,22 +1,23 @@
 ---
-title: "df_apply Vignette"
+title: "df_apply_vignette"
 author: "Gabby Freshly, Grace Van Farowe, Zander Hartsuff"
-date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteIndexEntry{df_apply_vignette}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
 
-```{r setup, include = FALSE}
+```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
 )
 ```
 
-
+```{r setup}
+library(newprojdata303)
+```
 
 ## Description 
 
