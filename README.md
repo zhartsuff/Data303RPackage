@@ -9,7 +9,7 @@ Below is the implementation of the df_apply() function:
 df_apply <- function(.data, .fun, .filter, ...) {
   new_df <- lapply(.data, function(x) {
     if (.filter(x)) {
-      .fun(x)
+      .fun(x, ...)
     }
     data.frame(new_df)
   })
