@@ -2,11 +2,11 @@ Package: newprojdata303
 Title: This package takes a data frame and applies a function to each column where a condition is met
 Version: 0.0.0.9000
 Authors@R: 
-    person("Grace", "Van Farowe", , "gev22", role = c("aut"),
+    person("Grace", "Van Farowe", , "gev22@calvin.edu", role = c("aut"),
            comment = c(ORCID = "YOUR-ORCID-ID"))
-    person("Zander", "Hartsuff", , "zrh5", role = c("aut", "cre"),
+    person("Zander", "Hartsuff", , "zrh5@calvin.edu", role = c("aut", "cre"),
            comment = c(ORCID = "YOUR-ORCID-ID"))
-    person("Gabby", "Freshly", , "gef4", role = c("aut"),
+    person("Gabby", "Freshly", , "gef4@calvin.edu", role = c("aut"),
            comment = c(ORCID = "YOUR-ORCID-ID"))
 Description: This package includes a function called df_apply which takes a data frame, condition function and a 
     mutator function. The function applies the mutator function to all vectors in the data frame where the condition is 
