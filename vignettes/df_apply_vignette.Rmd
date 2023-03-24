@@ -1,6 +1,5 @@
 ---
 title: "df_apply_vignette"
-author: "Gabby Freshly, Grace Van Farowe, Zander Hartsuff"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{df_apply_vignette}
