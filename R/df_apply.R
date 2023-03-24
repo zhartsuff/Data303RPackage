@@ -1,7 +1,7 @@
 df_apply <- function(.data, .fun, .filter, ...) {
   lapply(.data, function(x){
     if (.filter(x)){
-      .fun(x)
+      .fun(x, ...)
     } else {
       x
     }
