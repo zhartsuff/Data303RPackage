@@ -2,12 +2,9 @@ Package: newprojdata303
 Title: This package takes a data frame and applies a function to each column where a condition is met
 Version: 0.0.0.9000
 Authors@R: 
-    person("Grace", "Van Farowe", , "gev22", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-    person("Zander", "Hartsuff", , "zrh5", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-    person("Gabby", "Freshly", , "gef4", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
+    c(person("Grace", "Van Farowe", email = "gev22@calvin.edu", role = c("aut")),
+    person("Zander", "Hartsuff", email = "zrh5@calvin.edu", role = c("aut", "cre")),
+    person("Gabby", "Freshly", email = "gef4@calvin.edu", role = c("aut")))
 Description: This package includes a function called df_apply which takes a data frame, condition function and a 
     mutator function. The function applies the mutator function to all vectors in the data frame where the condition is 
     true and returns the resulting data frame. It also includes example data frames to test and use the function on.
@@ -15,11 +12,16 @@ License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
     license
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
+VignetteBuilder: knitr
 RoxygenNote: 7.2.3
 Suggests: 
+<<<<<<< HEAD
     knitr,
     rmarkdown,
     testthat (>= 3.0.0)
+=======
+    testthat (>= 3.0.0), knitr, rmarkdown
+>>>>>>> 5c905fa47b5e3bbd1153bd162d9926c1a5f4708b
 Config/testthat/edition: 3
 Depends: 
     R (>= 2.10)

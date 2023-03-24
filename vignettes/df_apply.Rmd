@@ -1,22 +1,22 @@
 ---
-title: "df_apply Vignette"
-author: "Gabby Freshly, Grace Van Farowe, Zander Hartsuff"
-date: "`r Sys.Date()`"
+title: "df_apply"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteIndexEntry{df_apply}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
 
-```{r setup, include = FALSE}
+```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
 )
 ```
 
-
+```{r setup}
+library(newprojdata303)
+```
 
 ## Description 
 
@@ -27,4 +27,3 @@ This function takes in a data frame, a function, and a filter. The function can 
 Our team used df_apply to to round the lengths and widths of iris petals using the R preset Iris dataframe. This would be useful as average gardeners aren't going to be micro-measuring their iris petals' lengths. To use df_apply to round numbers, simply use the premade function round in the place of .fun. 
 
 iris_function <- df_apply(iris, round, is.numeric)
-
