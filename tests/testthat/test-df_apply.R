@@ -6,4 +6,10 @@ test_that("Our function properly turns character vectors in a data frame to uppe
   expect_equal(df_apply(simple_df, toupper, is.character), simple_up)
 })
 
+test_that("We can pass in arguments to .function with ...", {
+  expect_equal(df_apply(decimal_data, .fun = round,
+                        .filter = function(x) { is.numeric(x) && (mean(x) > 10)}, digits = -1),
+               dd_rounded1)
+})
+
 

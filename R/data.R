@@ -1,7 +1,7 @@
 #' Testing data for data 303 project
 #'
 #' Simple data containing columns of numeric and character data for use in testing
-#' df_apply function. 
+#' df_apply function.
 #'
 #' @format ## `simple_df`
 #' A data frame with 5 rows and 5 columns
@@ -52,10 +52,45 @@
 #' Base R iris data set with numeric columns rounded
 #'
 #' @format ## `iris_rounded`
-#' iris_rounded is a data frame with 150 cases (rows) and 5 variables (columns) 
+#' iris_rounded is a data frame with 150 cases (rows) and 5 variables (columns)
 #' named Sepal.Length, Sepal.Width, Petal.Length, Petal.Width, and Species.
 #' \describe{
 #'   \item{all}{Use help(iris) to see details about data}
 #
 #' @source <iris package in base r>
 "iris_rounded"
+
+#' Decimal data
+#'
+#' More testing data with numbers of varying lengths
+#'
+#' @format ## `decimal_data`
+#' A data frame with 6 rows and 4 columns:
+#' \describe{
+#'   \item{medium}{Medium sized numbers with decimals}
+#'   \item{words}{characters; rounding will not apply}
+#'   \item{big}{large numbers}
+#'   \item{mixed}{both large and small numbers}
+#'   \item{small}{small numbers}
+#'
+#' }
+#' @source <none>
+"decimal data"
+
+#' dd_rounded1
+#'
+#' A version of decimal_data with only numeric columns with mean greater than 10
+#' rounded to the nearest 10. For testing df_apply only.
+#'
+#' @format ## `dd_rounded1`
+#' A data frame with 6 rows and 4 columns:
+#' \describe{
+#'   \item{medium}{Medium sized numbers with decimals, not rounded}
+#'   \item{words}{characters; rounding will not apply}
+#'   \item{big}{large numbers, rounded to the nearest 10}
+#'   \item{mixed}{both large and small numbers, rounded to the nearest 10}
+#'   \item{small}{small numbers, not rounded}
+#'
+#' }
+#' @source <none>
+"dd_rounded1"
