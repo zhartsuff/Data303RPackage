@@ -1,8 +1,8 @@
 ---
-title: "df_apply_vignette"
+title: "df_apply"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{df_apply_vignette}
+  %\VignetteIndexEntry{df_apply}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
