@@ -65,7 +65,7 @@
 #' More testing data with numbers of varying lengths
 #'
 #' @format ## `decimal_data`
-#' A data frame with 6 rows and 4 columns:
+#' A data frame with 6 rows and 5 columns:
 #' \describe{
 #'   \item{medium}{Medium sized numbers with decimals}
 #'   \item{words}{characters; rounding will not apply}
@@ -83,7 +83,7 @@
 #' rounded to the nearest 10. For testing df_apply only.
 #'
 #' @format ## `dd_rounded1`
-#' A data frame with 6 rows and 4 columns:
+#' A data frame with 6 rows and 5 columns:
 #' \describe{
 #'   \item{medium}{Medium sized numbers with decimals, not rounded}
 #'   \item{words}{characters; rounding will not apply}
@@ -94,3 +94,21 @@
 #' }
 #' @source <none>
 "dd_rounded1"
+
+#' dd_rounded2
+#'
+#' A version of decimal_data with all numeric columns rounded to 3
+#' deimal places.
+#'
+#' @format ## `dd_rounded2`
+#' A data frame with 6 rows and 5 columns:
+#' \describe{
+#'   \item{medium}{Medium sized numbers with decimals, rounded}
+#'   \item{words}{characters; rounding will not apply}
+#'   \item{big}{large numbers, no decimals so rounding doesn't do anything}
+#'   \item{mixed}{both large and small numbers, rounded}
+#'   \item{small}{small numbers, rounded}
+#'
+#' }
+#' @source <none>
+"dd_rounded2"
