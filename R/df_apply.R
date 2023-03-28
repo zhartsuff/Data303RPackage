@@ -9,6 +9,7 @@
 #' @examples
 #' df_apply(iris, round, is.numeric, digits = 4)
 #' df_apply(simple_df, toupper, is.character)
+#' @export
 df_apply <- function(.data, .fun, .filter, ...) {
   if(!is.data.frame(.data)){
     stop("You have entered a non data frame. Please try again")
