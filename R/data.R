@@ -75,7 +75,7 @@
 #'
 #' }
 #' @source <none>
-"decimal data"
+"decimal_data"
 
 #' dd_rounded1
 #'
