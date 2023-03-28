@@ -15,3 +15,7 @@ test_that("We can use more complex arguments and pass in arguments to .function 
 test_that("rounding to three decimal places works", {
   expect_equal(df_apply(decimal_data, round, is.numeric, digits = 3), dd_rounded2)
 })
+
+test_that("passing a non data frame throws error", {
+  expect_error(df_apply(c(5,6,7), round, is.numeric))
+})

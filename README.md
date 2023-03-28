@@ -9,6 +9,9 @@ Below is the implementation of the df_apply() function:
 
 ```{r}
 df_apply <- function(.data, .fun, .filter, ...) {
+  if(!is.data.frame(.data)){
+    stop("You have entered a non data frame. Please try again")
+  }
   new_df <- lapply(.data, function(x) {
     if (.filter(x)) {
       .fun(x, ...)
