@@ -9,7 +9,8 @@
 #' @examples
 #' df_apply(iris, round, is.numeric, digits = 4)
 #' df_apply(simple_df, toupper, is.character)
-df_apply <- function(.data, .fun, .filter, ...) {
+#' @exportS3Method pkg::newprojdata303
+newprojdata303.df_apply <- function(.data, .fun, .filter, ...) {
   if(!is.data.frame(.data)){
     stop("You have entered a non data frame. Please try again")
   }
