@@ -6,7 +6,7 @@ This package is created for Data 303 at Calvin University. In its basic form, it
 
 Extra arguments can be passed into the function as well. For instance, if round is being used, we can pass in "digits = 3" in place of "...". The function will then round all numbers to 3 decimal places.
 
-Below is the implementation of the df_apply() function:
+### Implementation of the df_apply() function:
 
 ```{r}
 df_apply <- function(.data, .fun, .filter, ...) {
@@ -22,13 +22,13 @@ df_apply <- function(.data, .fun, .filter, ...) {
   return (new_df)
 }
 ```
-Use cases:
+### Use cases:
 
 df_apply(iris, round, is.numeric, digits = 3) will round all numeric columns in the iris data frame to three decimal places, returning a new version with rounded integers.
 
 df_apply(simple_df, toupper, is.character) will take the data frame we created for testing purposes (included in the package) and return a data frame with all character columns changed to upper case.
 
-Data sets:
+### Data sets:
 
 The package includes boloria, a data frame about butterflies, iris_rounded, a mutated version of the base r iris data set for testing purposes, simple_df, an original data set created by the authors of the package to test df_apply, and simple_upper, a version of simple_df with upper case letters.
 
