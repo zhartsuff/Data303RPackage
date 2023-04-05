@@ -5,8 +5,6 @@
 \alias{decimal_data}
 \title{Decimal data}
 \format{
-\subsection{\code{decimal_data}}{
-
 A data frame with 6 rows and 5 columns:
 \describe{
 \item{medium}{Medium sized numbers with decimals}
@@ -16,12 +14,6 @@ A data frame with 6 rows and 5 columns:
 \item{small}{small numbers}
 
 }
-}
-}
-\source{
-\if{html}{\out{
-<none>
-}}
 }
 \usage{
 decimal_data

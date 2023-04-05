@@ -5,8 +5,6 @@
 \alias{dd_rounded1}
 \title{dd_rounded1}
 \format{
-\subsection{\code{dd_rounded1}}{
-
 A data frame with 6 rows and 5 columns:
 \describe{
 \item{medium}{Medium sized numbers with decimals, not rounded}
@@ -16,12 +14,6 @@ A data frame with 6 rows and 5 columns:
 \item{small}{small numbers, not rounded}
 
 }
-}
-}
-\source{
-\if{html}{\out{
-<none>
-}}
 }
 \usage{
 dd_rounded1

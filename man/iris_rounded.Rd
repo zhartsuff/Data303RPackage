@@ -5,18 +5,10 @@
 \alias{iris_rounded}
 \title{Iris data set rounded}
 \format{
-\subsection{\code{iris_rounded}}{
-
 iris_rounded is a data frame with 150 cases (rows) and 5 variables (columns)
 named Sepal.Length, Sepal.Width, Petal.Length, Petal.Width, and Species.
 \describe{
 \item{all}{Use help(iris) to see details about data}
-}
-}
-\source{
-\if{html}{\out{
-<iris package in base r>
-}}
 }
 \usage{
 iris_rounded
