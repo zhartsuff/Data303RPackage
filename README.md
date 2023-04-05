@@ -1,10 +1,19 @@
 # Data303RPackage
-# Created by Grace Van Farowe, Zander Hartsuff, and Gabby Freshly
+#### Created by Grace Van Farowe, Zander Hartsuff, and Gabby Freshly
 https://garcie.github.io/Data303RPackage/
 
 This package is created for Data 303 at Calvin University. In its basic form, it includes a function called df_apply which takes a data frame, condition function and a mutator function. The function applies the mutator function to all vectors in the data frame where the condition is true and returns the resulting data frame. It also includes example data frames to test and use the function on. 
 
 Extra arguments can be passed into the function as well. For instance, if round is being used, we can pass in "digits = 3" in place of "...". The function will then round all numbers to 3 decimal places.
+
+### How to install
+
+Type the following in r console:
+
+```{r}
+# install.packages("devtools")
+devtools::install_github("zhartsuff/Data303RPackage")
+```
 
 ### Implementation of the df_apply() function:
 
