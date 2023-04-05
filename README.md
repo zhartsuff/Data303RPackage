@@ -6,6 +6,15 @@ This package is created for Data 303 at Calvin University. In its basic form, it
 
 Extra arguments can be passed into the function as well. For instance, if round is being used, we can pass in "digits = 3" in place of "...". The function will then round all numbers to 3 decimal places.
 
+### How to install
+
+Type the following in r console:
+
+```{r}
+# install.packages("devtools")
+devtools::install_github("zhartsuff/Data303RPackage")
+```
+
 ### Implementation of the df_apply() function:
 
 ```{r}
