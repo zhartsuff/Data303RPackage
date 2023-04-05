@@ -5,8 +5,6 @@
 \alias{simple_df}
 \title{Testing data for data 303 project}
 \format{
-\subsection{\code{simple_df}}{
-
 A data frame with 5 rows and 5 columns
 \describe{
 \item{X1}{A vector of the letters A-E}
@@ -14,12 +12,6 @@ A data frame with 5 rows and 5 columns
 \item{X3}{Random numbers in decimal format}
 \item{X4}{Random integers}
 \item{X5}{Names with upper and lower case letters}
-}
-}
-\source{
-\if{html}{\out{
-<No source>
-}}
 }
 \usage{
 simple_df

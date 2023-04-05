@@ -3,7 +3,7 @@
 #' Simple data containing columns of numeric and character data for use in testing
 #' df_apply function.
 #'
-#' @format ## `simple_df`
+#' @format
 #' A data frame with 5 rows and 5 columns
 #' \describe{
 #'   \item{X1}{A vector of the letters A-E}
@@ -11,7 +11,6 @@
 #'   \item{X3}{Random numbers in decimal format}
 #'   \item{X4}{Random integers}
 #'   \item{X5}{Names with upper and lower case letters}
-#' @source <No source>
 "simple_df"
 
 #' Testing data for data 303 project
@@ -19,7 +18,7 @@
 #' Simple data containing columns of numeric and character data for use in testing
 #' df_apply function, all in uppercase
 #'
-#' @format ## `simple_up`
+#' @format
 #' A data frame with 5 rows and 5 columns
 #' \describe{
 #'   \item{X1}{A vector of the letters A-E}
@@ -27,14 +26,13 @@
 #'   \item{X3}{Random numbers in decimal format}
 #'   \item{X4}{Random integers}
 #'   \item{X5}{Names with upper case letters}
-#' @source <No source>
 "simple_up"
 
 #' Climate conditions of the boloria chariclea butterfly
 #'
 #' Data from a study of wing lengths of butterflies
 #'
-#' @format ## `boloria`
+#' @format
 #' A data frame with 5 rows and 5 columns
 #' \describe{
 #'   \item{year}{Data collected from 1996 - 2013}
@@ -51,20 +49,19 @@
 #'
 #' Base R iris data set with numeric columns rounded
 #'
-#' @format ## `iris_rounded`
+#' @format
 #' iris_rounded is a data frame with 150 cases (rows) and 5 variables (columns)
 #' named Sepal.Length, Sepal.Width, Petal.Length, Petal.Width, and Species.
 #' \describe{
 #'   \item{all}{Use help(iris) to see details about data}
 #
-#' @source <iris package in base r>
 "iris_rounded"
 
 #' Decimal data
 #'
 #' More testing data with numbers of varying lengths
 #'
-#' @format ## `decimal_data`
+#' @format
 #' A data frame with 6 rows and 5 columns:
 #' \describe{
 #'   \item{medium}{Medium sized numbers with decimals}
@@ -74,7 +71,6 @@
 #'   \item{small}{small numbers}
 #'
 #' }
-#' @source <none>
 "decimal_data"
 
 #' dd_rounded1
@@ -82,7 +78,7 @@
 #' A version of decimal_data with only numeric columns with mean greater than 10
 #' rounded to the nearest 10. For testing df_apply only.
 #'
-#' @format ## `dd_rounded1`
+#' @format
 #' A data frame with 6 rows and 5 columns:
 #' \describe{
 #'   \item{medium}{Medium sized numbers with decimals, not rounded}
@@ -92,7 +88,6 @@
 #'   \item{small}{small numbers, not rounded}
 #'
 #' }
-#' @source <none>
 "dd_rounded1"
 
 #' dd_rounded2
@@ -100,7 +95,7 @@
 #' A version of decimal_data with all numeric columns rounded to 3
 #' deimal places.
 #'
-#' @format ## `dd_rounded2`
+#' @format
 #' A data frame with 6 rows and 5 columns:
 #' \describe{
 #'   \item{medium}{Medium sized numbers with decimals, rounded}
@@ -110,5 +105,4 @@
 #'   \item{small}{small numbers, rounded}
 #'
 #' }
-#' @source <none>
 "dd_rounded2"
