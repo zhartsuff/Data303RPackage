@@ -3,6 +3,7 @@
 #' Simple data containing columns of numeric and character data for use in testing
 #' df_apply function.
 #'
+#' @docType data
 #' @format
 #' A data frame with 5 rows and 5 columns
 #' \describe{
@@ -18,6 +19,7 @@
 #' Simple data containing columns of numeric and character data for use in testing
 #' df_apply function, all in uppercase
 #'
+#' @docType data
 #' @format
 #' A data frame with 5 rows and 5 columns
 #' \describe{
@@ -32,6 +34,7 @@
 #'
 #' Data from a study of wing lengths of butterflies
 #'
+#' @docType data
 #' @format
 #' A data frame with 5 rows and 5 columns
 #' \describe{
@@ -49,6 +52,7 @@
 #'
 #' Base R iris data set with numeric columns rounded
 #'
+#' @docType data
 #' @format
 #' iris_rounded is a data frame with 150 cases (rows) and 5 variables (columns)
 #' named Sepal.Length, Sepal.Width, Petal.Length, Petal.Width, and Species.
@@ -61,6 +65,7 @@
 #'
 #' More testing data with numbers of varying lengths
 #'
+#' @docType data
 #' @format
 #' A data frame with 6 rows and 5 columns:
 #' \describe{
@@ -78,6 +83,7 @@
 #' A version of decimal_data with only numeric columns with mean greater than 10
 #' rounded to the nearest 10. For testing df_apply only.
 #'
+#' @docType data
 #' @format
 #' A data frame with 6 rows and 5 columns:
 #' \describe{
@@ -95,6 +101,7 @@
 #' A version of decimal_data with all numeric columns rounded to 3
 #' deimal places.
 #'
+#' @docType data
 #' @format
 #' A data frame with 6 rows and 5 columns:
 #' \describe{

@@ -1,0 +1,72 @@
+---
+title: "altair_scatterplot"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{altair_scatterplot}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+When working in both R and Python, be sure to load reticulate, which helps with transferring between the two languages. You can also load r data sets to be use in Python.
+```{r setup}
+library(newprojdata303)
+library(reticulate)
+library(tidyverse)
+
+```
+
+By convention, always import pandas as pd. In python, "as" renames an object to something that is easier to type in order to save time for repeated use.
+
+In the curly brackets at the top of the chunk, write "python" instead of R to indicate that this is Python code. Standard Python rules apply. 
+```{python}
+import pandas as pd
+import altair as alt
+```
+
+```{python}
+mpg = r.mpg
+
+mpg
+```
+
+```{python}
+alt.Chart(mpg).mark_point().encode(
+    x='cty',
+    y='hwy'
+)
+```
+
+
+```{python}
+alt.Chart(mpg).mark_point().encode(
+    x='cty',
+    y='hwy',
+    color='manufacturer'
+)
+```
+
+```{python}
+alt.Chart(mpg).mark_point().encode(
+    x='cty',
+    y='hwy',
+    color='manufacturer',
+    tooltip=['manufacturer', 'model'] # show Name and Origin in a tooltip
+).interactive()
+```
+
+```{python}
+alt.Chart(mpg).mark_circle().encode(
+    x='cty',
+    y='hwy',
+    color='manufacturer',
+    tooltip=['manufacturer', 'model'] # show Name and Origin in a tooltip
+).interactive()
+```
+
