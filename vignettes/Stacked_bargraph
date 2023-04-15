@@ -1,0 +1,38 @@
+---
+title: "altair_stacked_bar_graph"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+Reticulate is an important package to load while coding in Rstudio. This package allows for R to communicate with the Python system.Libraries are done in the R chunk.
+```{r}
+library(reticulate)
+```
+
+In python, make sure to import pandas and altair. Nicknames can help ut down on the time it takes to incorporate them into your code.
+```{python}
+import pandas as pd
+import altair as alt
+
+from vega_datasets import data
+cars = data.cars()
+
+alt.Chart(cars).mark_bar(size=50).encode(
+    x='Year',
+    y = 'count()',
+    color='Origin',
+).interactive()
+```
+After importing pd and alt, you can import data from packages or upload your own data. After importing the data, make sure to turn it into a dataframe. To make a stacked bar graph, your data must have at least three columns (one categorical and two quantitative). If not, the count() function can count the number of times a name appears in a dataset.
+
+
