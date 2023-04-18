@@ -14,6 +14,90 @@ knitr::opts_chunk$set(
 )
 ```
 
-```{r setup}
-library(newprojdata303)
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(mosaic)
+library(gapminder)
 ```
+
+## R Markdown
+
+```{python}
+import altair as alt
+import pandas as pd
+```
+
+#### Some brief data tidying
+
+```{r}
+countries <- c(
+  "Kenya", "Uganda", "Eritrea",
+  "Ethiopia", "Djibouti", "Somalia",
+  "Rwanda", "Tanzania", "Burundi")
+
+east_africa_pop <- gapminder |>
+  filter(country %in% countries)
+east_africa_pop
+```
+
+# Altair Line Chart Features
+
+Altair is a staistical graphics library in Python. It allows you to quickly create charts quickly and concisely. One of Altair's visualization features is for line charts. Altair comes equipped with many ways to easily add features to a line chart just by changing a couple words in your code.
+
+## Normal Line Chart
+
+```{python}
+east_africa_pop = r.east_africa_pop
+
+alt.Chart(east_africa_pop).mark_line().encode(
+    x=alt.X("year", axis=alt.Axis(title="Year")),
+    y=alt.Y("pop", axis=alt.Axis(title="Population")),
+    color="country:N"
+).properties(
+    title="Population in East Africa over Time"
+)
+```
+
+Above is a simple multiple series line chart (has overlapping lines) that compares population data of several East African countries. The data displayed is census data for each country's population beginning in 1952 and done every 5 years until 2007. This is something that can be done easily without using Altair or other graphics packages, but below are just a few of the many features that Altair contains that can transform our line chart.
+
+## Smoothed Lines
+
+```{python}
+alt.Chart(east_africa_pop).mark_line(interpolate="monotone").encode(
+    x=alt.X("year", axis=alt.Axis(title="Year")),
+    y=alt.Y("pop", axis=alt.Axis(title="Population")),
+    color="country:N"
+).properties(
+    title="Populations of East Africa with Monotone Interpolation"
+)
+```
+
+Instead of making sharp turns at each data point, the line is curved to show the trends more neatly. It is not very necessary for this particular situation, but in instances where data oscillates many times, this can be very useful.
+
+## Step Chart
+
+```{python}
+alt.Chart(east_africa_pop).mark_line(interpolate="step-after").encode(
+    x=alt.X("year", axis=alt.Axis(title="Year")),
+    y=alt.Y("pop", axis=alt.Axis(title="Population")),
+    color="country:N"
+).properties(
+    title="Populations of East Africa Step Chart"
+)
+```
+
+A step chart is a type of line chart with vertical and horizontal jumps between data points. The graph above is the same data as before simply using a step chart to display the data. A step chart is useful for highlighting irregular jumps in data. Since there don't appear to be any in our data, this isn't super useful in this instance, but there are other cases when this would be helpful.
+
+## With Point Labels
+
+```{python}
+alt.Chart(east_africa_pop).mark_line(point=True).encode(
+    x=alt.X("year", axis=alt.Axis(title="Year")),
+    y=alt.Y("pop", axis=alt.Axis(title="Population")),
+    color="country:N"
+).properties(
+    title="Populations of East Africa with Point Labels"
+)
+```
+
+This looks very similar to our original plot, only that the data points have all been labeled with circles. This is a helpful tool when we care more about the plot itself, but seeing precisely where each data point is which could be useful in this case.
