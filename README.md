@@ -1,6 +1,6 @@
 # Data303RPackage
 #### Created by Grace Van Farowe, Zander Hartsuff, and Gabby Freshly
-https://garcie.github.io/Data303RPackage/
+https://zhartsuff.github.io/Data303RPackage
 
 This package is created for Data 303 at Calvin University. In its basic form, it includes a function called df_apply which takes a data frame, condition function and a mutator function. The function applies the mutator function to all vectors in the data frame where the condition is true and returns the resulting data frame. It also includes example data frames to test and use the function on. 
 
