@@ -18,8 +18,6 @@ When working in both R and Python, be sure to load reticulate, which helps with 
 ```{r setup}
 library(newprojdata303)
 library(reticulate)
-library(tidyverse)
-
 ```
 
 By convention, always import pandas as pd. In python, "as" renames an object to something that is easier to type in order to save time for repeated use.
@@ -30,11 +28,11 @@ import pandas as pd
 import altair as alt
 ```
 
+To transfer data from R to Python, write "r.data_frame" (for example) in a Python chunk. To transfer from Python to R, write "py$data_frame."
 ```{python}
 mpg = r.mpg
-
-mpg
 ```
+To create a simple scatter plot, use the following code, replacing mpg with your own data frame of choice, and replacing cty and hwy with two variables from the data frame. 
 
 ```{python}
 alt.Chart(mpg).mark_point().encode(
@@ -43,7 +41,7 @@ alt.Chart(mpg).mark_point().encode(
 )
 ```
 
-
+Customize by adding new arguments. color = links color to the different levels of a variable and adds a legend:
 ```{python}
 alt.Chart(mpg).mark_point().encode(
     x='cty',
@@ -52,21 +50,49 @@ alt.Chart(mpg).mark_point().encode(
 )
 ```
 
+One interesting and useful feature of Altair is its support for interactive charts. These are easy to implement. Simply add the argument "tooltip = ["list", "of", "variables", "to display"]", which tells Altair which information to show when someone hovers overs a data point. Then add ".interactive()" at the end of your code, as you see below. Try zooming in or hovering to test the feature.
 ```{python}
 alt.Chart(mpg).mark_point().encode(
     x='cty',
     y='hwy',
     color='manufacturer',
-    tooltip=['manufacturer', 'model'] # show Name and Origin in a tooltip
+    tooltip=['manufacturer', 'model'] # add a list with variables you want to display when hovering
 ).interactive()
 ```
 
+vega_datasets is an easy source of data sets for Altair and contains many useful data sets for learning to use the package. The iris data set is one example.
+
+mark_circle is another way of creating a scatterplot that only differs visually from mark_point, providing filled-in circles instead of rings.
 ```{python}
-alt.Chart(mpg).mark_circle().encode(
-    x='cty',
-    y='hwy',
-    color='manufacturer',
-    tooltip=['manufacturer', 'model'] # show Name and Origin in a tooltip
+from vega_datasets import data
+
+iris = data.iris()
+
+alt.Chart(iris).mark_circle().encode(
+    x='petalWidth',
+    y='petalLength',
+)
+```
+
+Experiment with linking size and color to variables. You want these elements to add something meaningful to the viewer's understanding of the data.
+```{python}
+alt.Chart(iris).mark_circle().encode(
+    x='petalWidth',
+    y='petalLength',
+    color = "species",
+    size = "sepalWidth"
+)
+```
+
+Here the size variable isn't very useful. There isn't a lot of difference, at least to the naked eye. But we could add a interactive feature to show exact sizes. The interactive feature also helps with overcrowded data points, since it lets up zoom in. We can also add opacity to make the circles more see-through. The opacity argument goes inside mark_circle(). By default, opacity is set to about 0.7, so we choose a value below that.
+
+```{python}
+alt.Chart(iris).mark_circle(opacity = .4).encode(
+    x='petalWidth',
+    y='petalLength',
+    color = "species",
+    size = "sepalWidth",
+    tooltip=['species', 'sepalWidth']
 ).interactive()
 ```
 
