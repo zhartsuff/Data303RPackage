@@ -84,7 +84,8 @@ alt.Chart(iris).mark_circle().encode(
 )
 ```
 
-Here the size variable isn't very useful. There isn't a lot of difference, at least to the naked eye. But we could add a interactive feature to show exact sizes. The interactive feature also helps with overcrowded data points, since it lets up zoom in. We can also add opacity to make the circles more see-through. The opacity argument goes inside mark_circle(). By default, opacity is set to about 0.7, so we choose a value below that.
+Here the size variable isn't very useful. There isn't a lot of difference, at least to the naked eye. But we could add a interactive feature to show exact sizes. The interactive feature also helps with overcrowded data points, since it lets up zoom in. We can also add opacity to make the circles more see-through. The opacity argument goes inside mark_circle(). By default, opacity is set to about 0.7, so we choose a value below that
+.
 
 ```{python}
 alt.Chart(iris).mark_circle(opacity = .4).encode(
