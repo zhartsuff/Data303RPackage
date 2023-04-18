@@ -1,5 +1,5 @@
 ---
-title: "altair_stacked_bar_graph"
+title: "Stacked_bargraph"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Vignette Title}
