@@ -1,0 +1,56 @@
+---
+title: "df_apply"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{df_apply}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(newprojdata303)
+```
+
+## Description 
+
+This function takes in a data frame, a function, and a filter. The function can 
+be applied to a column of a data frame and return the column of the dataframe. 
+The filter will return either a true or false.
+
+
+## Use 
+
+df_apply(.data, .fun, .filter, ...)
+
+Our team used df_apply to round the lengths and widths of iris petals using 
+the R preset iris data frame. (This would be useful when precision isn't needed
+and the user wants to round to integers before analysis.) To use df_apply() to 
+round numbers, simply use the premade function round() in the place of .fun, 
+with is.numeric() as .filter and the data frame of your choice:
+
+iris_function <- df_apply(iris, round, is.numeric)
+
+The function can be used with any data set, mutate function, and filter 
+function. The filter function will be applied to all columns, one by one, 
+checking whether a condition is true. For instance, to change all text in a data 
+frame to upper case, we can use the is.character() function as a filter, than 
+apply the toupper() function to change columns of characters to upper case.
+
+The df_apply() function returns an updated data frame.
+
+## General requirements
+Pass the df_apply function:
+
+1. a data frame
+2. a function which can be applied to a vector and change it
+3. a function which can take a vector and check whether a condition is true for 
+that vector (for instance, whether it contains a certain data type)
+
+
