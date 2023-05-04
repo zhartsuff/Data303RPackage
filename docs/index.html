@@ -45,6 +45,9 @@
 <li class="nav-item dropdown">
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-articles">
+    <a class="dropdown-item" href="articles/Stacked_bargraph.html">Stacked_bargraph</a>
+    <a class="dropdown-item" href="articles/altair_linegraph.html">altair_linegraph</a>
+    <a class="dropdown-item" href="articles/altair_scatterplot.html">altair_scatterplot</a>
     <a class="dropdown-item" href="articles/df_apply.html">df_apply</a>
   </div>
 </li>
@@ -63,13 +66,23 @@
   <main id="main" class="col-md-9"><div class="section level1">
 <div class="page-header"><h1 id="data303rpackage">Data303RPackage<a class="anchor" aria-label="anchor" href="#data303rpackage"></a>
 </h1></div>
-</div>
-<div class="section level1">
-<h1 id="created-by-grace-van-farowe-zander-hartsuff-and-gabby-freshly">Created by Grace Van Farowe, Zander Hartsuff, and Gabby Freshly<a class="anchor" aria-label="anchor" href="#created-by-grace-van-farowe-zander-hartsuff-and-gabby-freshly"></a>
-</h1>
+<div class="section level4">
+<h4 id="created-by-grace-van-farowe-zander-hartsuff-and-gabby-freshly">Created by Grace Van Farowe, Zander Hartsuff, and Gabby Freshly<a class="anchor" aria-label="anchor" href="#created-by-grace-van-farowe-zander-hartsuff-and-gabby-freshly"></a>
+</h4>
+<p><a href="https://zhartsuff.github.io/Data303RPackage" class="external-link uri">https://zhartsuff.github.io/Data303RPackage</a></p>
 <p>This package is created for Data 303 at Calvin University. In its basic form, it includes a function called df_apply which takes a data frame, condition function and a mutator function. The function applies the mutator function to all vectors in the data frame where the condition is true and returns the resulting data frame. It also includes example data frames to test and use the function on.</p>
 <p>Extra arguments can be passed into the function as well. For instance, if round is being used, we can pass in “digits = 3” in place of “…”. The function will then round all numbers to 3 decimal places.</p>
-<p>Below is the implementation of the df_apply() function:</p>
+</div>
+<div class="section level3">
+<h3 id="how-to-install">How to install<a class="anchor" aria-label="anchor" href="#how-to-install"></a>
+</h3>
+<p>Type the following in r console:</p>
+<pre class="{r}"><code><span><span class="co"># install.packages("devtools")</span></span>
+<span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"zhartsuff/Data303RPackage"</span><span class="op">)</span></span></code></pre>
+</div>
+<div class="section level3">
+<h3 id="implementation-of-the-df_apply-function">Implementation of the df_apply() function:<a class="anchor" aria-label="anchor" href="#implementation-of-the-df_apply-function"></a>
+</h3>
 <pre class="{r}"><code><span><span class="va">df_apply</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">.data</span>, <span class="va">.fun</span>, <span class="va">.filter</span>, <span class="va">...</span><span class="op">)</span> <span class="op">{</span></span>
 <span>  <span class="kw">if</span><span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/as.data.frame.html" class="external-link">is.data.frame</a></span><span class="op">(</span><span class="va">.data</span><span class="op">)</span><span class="op">)</span><span class="op">{</span></span>
 <span>    <span class="kw"><a href="https://rdrr.io/r/base/stop.html" class="external-link">stop</a></span><span class="op">(</span><span class="st">"You have entered a non data frame. Please try again"</span><span class="op">)</span></span>
@@ -82,15 +95,21 @@
 <span>  <span class="op">}</span><span class="op">)</span></span>
 <span>  <span class="kw"><a href="https://rdrr.io/r/base/function.html" class="external-link">return</a></span> <span class="op">(</span><span class="va">new_df</span><span class="op">)</span></span>
 <span><span class="op">}</span></span></code></pre>
-<p>Use cases:</p>
+</div>
+<div class="section level3">
+<h3 id="use-cases">Use cases:<a class="anchor" aria-label="anchor" href="#use-cases"></a>
+</h3>
 <p>df_apply(iris, round, is.numeric, digits = 3) will round all numeric columns in the iris data frame to three decimal places, returning a new version with rounded integers.</p>
 <p>df_apply(simple_df, toupper, is.character) will take the data frame we created for testing purposes (included in the package) and return a data frame with all character columns changed to upper case.</p>
-<p>Data sets:</p>
+</div>
+<div class="section level3">
+<h3 id="data-sets">Data sets:<a class="anchor" aria-label="anchor" href="#data-sets"></a>
+</h3>
 <p>The package includes boloria, a data frame about butterflies, iris_rounded, a mutated version of the base r iris data set for testing purposes, simple_df, an original data set created by the authors of the package to test df_apply, and simple_upper, a version of simple_df with upper case letters.</p>
 <p>Try help(boloria) etc. for information on data sets in the package.</p>
 <p>See vignette and test cases for more general information on the df_apply function.</p>
 </div>
-
+</div>
   </main><aside class="col-md-3"><div class="license">
 <h2 data-toc-skip>License</h2>
 <ul class="list-unstyled">

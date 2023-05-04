@@ -99,7 +99,7 @@
 #' dd_rounded2
 #'
 #' A version of decimal_data with all numeric columns rounded to 3
-#' deimal places.
+#' decimal places.
 #'
 #' @docType data
 #' @format
@@ -113,3 +113,46 @@
 #'
 #' }
 "dd_rounded2"
+
+#' mpg
+#'
+#' Fuel economy data from 1999 to 2008 for 38 popular models of cars
+#' (From tidyverse)
+#'
+#' @docType data
+#' @format
+#' A data frame with 234 rows and 11 variables:
+#' \describe{
+#'   \item{manufacturer}{manufacturer name}
+#'   \item{model}{model name}
+#'   \item{displ}{engine displacement, in litres}
+#'   \item{year}{year of manufacture}
+#'   \item{cyl}{number of cylinders}
+#'   \item{trans}{type of transmission}
+#'   \item{drv}{the type of drive,f = front-wheel, r = rear wheel, 4 = 4wd}
+#'   \item{cty}{city miles per gallon}
+#'   \item{hwy}{highway miles per gallon}
+#'   \item{fl}{fuel type}
+#'   \item{class}{"type" of car}
+#'
+#' }
+"mpg"
+
+#' gapminder
+#'
+#' Population and life expectancy data from 1952 to 2007
+#' (From gapminder package)
+#'
+#' @docType data
+#' @format
+#' A data frame with 1704 rows and 6 variables:
+#' \describe{
+#'   \item{country}{country name}
+#'   \item{continent}{continent where country is}
+#'   \item{year}{year data was collected, between 1952 and 2007}
+#'   \item{lifeExp}{life expectancy for that country in that year}
+#'   \item{pop}{estimated population of that country in that year}
+#'   \item{gdpPercap}{gross domestic product per capita}
+#'
+#' }
+"gapminder"
